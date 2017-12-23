@@ -9,3 +9,5 @@
 /debian/hostmot2-firmware-*
 /debian/tmp
 *.py[co]
+settings*.sh
+settings*.csh
