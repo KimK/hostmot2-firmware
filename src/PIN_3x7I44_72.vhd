@@ -73,38 +73,38 @@ use work.IDROMConst.all;
 
 package PIN_3x7I44_72 is
     constant ModuleID : ModuleIDType :=(
-        (WatchDogTag,           x"00",          ClockLowTag,        x"01",          WatchDogTimeAddr&PadT,      WatchDogNumRegs,            x"00",          WatchDogMPBitMask),
-        (IOPortTag,             x"00",          ClockLowTag,        x"04",          PortAddr&PadT,              IOPortNumRegs,              x"00",          IOPortMPBitMask),
-        (MuxedQcountTag,        MQCRev,         ClockLowTag,        x"18",          MuxedQcounterAddr&PadT,     MuxedQCounterNumRegs,       x"00",          MuxedQCounterMPBitMask),
-        (MuxedQCountSelTag,     x"00",          ClockLowTag,        x"01",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (BSPITag,               x"00",          ClockLowTag,        x"03",          BSPIDataAddr&PadT,          BSPINumRegs,                x"11",          BSPIMPBitMask),
-        (SSerialTag,            x"00",          ClockLowTag,        x"01",          SSerialCommandAddr&PadT,    SSerialNumRegs,             x"10",          SSerialMPBitMask),
-        (LEDTag,                x"00",          ClockLowTag,        x"01",          LEDAddr&PadT,               LEDNumRegs,                 x"00",          LEDMPBitMask),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000"),
-        (NullTag,               x"00",          NullTag,            x"00",          NullAddr&PadT,              x"00",                      x"00",          x"00000000")
+        (WatchDogTag,   x"00",      ClockLowTag,        x"01",      WatchDogTimeAddr&PadT,      WatchDogNumRegs,    x"00",      WatchDogMPBitMask),
+        (IOPortTag,     x"00",      ClockLowTag,        x"03",      PortAddr&PadT,              IOPortNumRegs,      x"00",      IOPortMPBitMask),
+        (QcountTag,     x"02",      ClockLowTag,        x"0C",      QcounterAddr&PadT,          QCounterNumRegs,    x"00",      QCounterMPBitMask),
+        (PWMTag,        x"00",      ClockHighTag,       x"0C",      PWMValAddr&PadT,            PWMNumRegs,         x"00",      PWMMPBitMask),
+        (LEDTag,        x"00",      ClockLowTag,        x"01",      LEDAddr&PadT,               LEDNumRegs,         x"00",      LEDMPBitMask),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000"),
+        (NullTag,       x"00",      NullTag,            x"00",      NullAddr&PadT,              x"00",              x"00",      x"00000000")
         );
 
     constant PinDesc : PinDescType :=(
@@ -194,7 +194,9 @@ package PIN_3x7I44_72 is
 
         emptypin,emptypin,emptypin,emptypin,emptypin,emptypin,emptypin,emptypin,
         emptypin,emptypin,emptypin,emptypin,emptypin,emptypin,emptypin,emptypin,
-        emptypin,emptypin,emptypin,emptypin,emptypin,emptypin,emptypin,emptypin);
+        emptypin,emptypin,emptypin,emptypin,emptypin,emptypin,emptypin,emptypin
+
+        );
 
 end package PIN_3x7I44_72;
 
